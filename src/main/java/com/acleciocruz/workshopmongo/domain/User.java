@@ -1,5 +1,6 @@
 package com.acleciocruz.workshopmongo.domain;
 
+import com.acleciocruz.workshopmongo.resources.UserResource;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -9,6 +10,7 @@ import java.util.Objects;
 @Document(collection = "user")
 public class User implements Serializable {
     public static final long serialVersionUID = 1L;
+    public UserResource service;
 
     @Id
     private String id;
